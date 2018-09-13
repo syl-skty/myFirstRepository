@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="java类相关"/>
+	<classpathentry kind="src" path="String相关"/>
+	<classpathentry kind="src" path="java中对时间的操作"/>
+	<classpathentry kind="src" path="集合框架"/>
+	<classpathentry kind="src" path="进制转换"/>
+	<classpathentry kind="src" path="java中的IO与输入输出"/>
+	<classpathentry kind="src" path="java中网络编程"/>
+	<classpathentry kind="src" path="java多线程编程"/>
+	<classpathentry kind="src" path="java反射"/>
+	<classpathentry kind="src" path="java5之后的一些线程并发库"/>
+	<classpathentry kind="src" path="java通过windows控制台执行程序"/>
+	<classpathentry kind="src" path="java异常处理"/>
+	<classpathentry kind="src" path="注解"/>
+	<classpathentry kind="src" path="动态代理"/>
+	<classpathentry kind="src" path="jdbc学习"/>
+	<classpathentry kind="src" path="设计模式"/>
+	<classpathentry kind="src" path="java中一些使用的技术"/>
+	<classpathentry kind="src" path="java中的NIO"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/skty-jdbcDriver"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_7.0"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

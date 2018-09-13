@@ -1,0 +1,6 @@
+关键点是使用
+class.cast()
+方法将数据库中查询到的数据强制转换为与实体类相同的类型
+
+
+characterEncoding=UTF-8

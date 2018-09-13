@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/FileUpload.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script>
+			function doSubmit(){
+				var data=new FormData();
+				data.append("f1",$("#f")[0].files[0]);
+				data.append("f2",$("#f1")[0].files[0]);
+				uploadFile(data,null,$("#percent"),"FileUpload","input");
+			}
+		</script>
+	</head>
+	<body>	
+		<input id="f" type="file" name="myfile" />
+		<input id="f1" type="file" name="myfile1" />
+			<div style="height: 10px;width: 300px;border: 1px solid black;">
+				<div id="percent" style="height: 100%;background: green;width:0;font-size: 10px;text-align: right;"></div>
+			</div>
+			<button onclick="doSubmit()">提交</button>
+	</body>
+</html>

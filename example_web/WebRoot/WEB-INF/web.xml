@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>example_web</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+ <!-- 多个过滤器过滤的顺序是按照在web.xml配置的前后顺序来执行的，形成一条过滤链 -->
+ 
+<!-- 解决字符乱码的过滤器 -->
+  <!-- <filter>
+  		<filter-name>CharacterFilter</filter-name>
+  		<filter-class>过滤器实现解决中文乱码.Character_Filter</filter-class>
+  		<init-param>
+  			<description>用于过滤用户请求，将请求的字符编码设置为指定的编码格式，防止乱码</description>
+  			定义一个参数用于保存指定要过滤的字符编码格式
+  			<param-name>Enconding</param-name>
+  			<param-value>utf-8</param-value>
+  		</init-param>
+  </filter>
+  <filter-mapping>
+  		<filter-name>CharacterFilter</filter-name>
+  		
+  		指定当前过滤器要拦截的Servlet的名称
+  		<servlet-name>Myservlet</servlet-name>
+  		
+  		指定过滤器要拦截的用户请求的请求路径(/*表示所有)，可以使用通配符*,可使用多次这个标签来配置过滤器对多个url作用
+  		<url-pattern>/*</url-pattern>
+  		
+  		
+  		指定过滤器类型：(默认是REQUEST)
+  		子元素可以设置的值及其意义
+		REQUEST：当用户直接访问页面时，Web容器将会调用过滤器。如果目标资源是通过RequestDispatcher的include()或forward()方法访问时，那么该过滤器就不会被调用。
+		INCLUDE：如果目标资源是通过RequestDispatcher的include()方法访问时，那么该过滤器将被调用。除此之外，该过滤器不会被调用。
+		FORWARD：如果目标资源是通过RequestDispatcher的forward()方法访问时，那么该过滤器将被调用，除此之外，该过滤器不会被调用。
+		ERROR：如果目标资源是通过声明式异常处理机制调用时，那么该过滤器将被调用。除此之外，过滤器不会被调用。
+		
+  		<dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ASYNC</dispatcher>
+  </filter-mapping> -->
+  
+  
+<!-- 实现错误导航的过滤器 -->
+	<filter>
+		<filter-name>ErrorFilter</filter-name>
+		<filter-class>过滤器实现错误页面导航.Error_Filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ErrorFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	<!-- 配置error-page，当出现以下指定的错误代码时，就可以自动跳转到指定的错误显示页面(浏览器地址栏上的地址不会改变) -->
+	<error-page>
+		<error-code>404</error-code>
+		<!-- 必须在页面名前加/ -->
+		<location>/error.html</location>
+	</error-page>
+	
+	
+<!-- Session监听器配置 -->
+	<listener>
+		<display-name>session监听器</display-name>
+		<listener-class>session监听器.SessionListenner</listener-class>
+	</listener>
+	
+<!-- WebContext监听配置 -->
+	<listener>
+		<listener-class>webContext监听器.WebContextListener</listener-class>
+	</listener>
+  <servlet>
+    <servlet-name>FileUpload</servlet-name>
+    <servlet-class>servlet完成文件上传.FileUpload</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FileDownload</servlet-name>
+    <servlet-class>使用servlet实现文件断点下载.FileDownload</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>使用servlet实现文件断点下载.Test</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>FileUpload</servlet-name>
+    <url-pattern>/FileUpload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileDownload</servlet-name>
+    <url-pattern>/FileDownload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/Test</url-pattern>
+  </servlet-mapping>
+	
+	
+
+</web-app>

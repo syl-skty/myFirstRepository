@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="app_preset_prof_preset_name">TestFile Launch Configuration</entry>
+<entry key="app_preset_prof_preset_filter_s"/>
+<entry key="app_preset_prof_preset_filter_p">Collection类中的sort方法.*,
+File类的使用.*,
+StringBuilder类.*,
+String类中的方法.*,
+String类地址相关.*,
+contains方法的重写.*,
+example.*,
+foreach.*,
+indexOf方法的实现.*,
+java中的包装类.*,
+内部类相关.*,
+封装.*,
+抽象类.*,
+接口.*,
+构造方法使用.*,
+类的继承.*,
+获取和操作时间.*,
+进制转换.*,
+重载方法.*,
+静态常量与静态方法.*</entry>
+<entry key="app_preset_prof_preset_alloc_p">10</entry>
+<entry key="app_preset_"/>
+<entry key="app_preset_prof_preset_samplingRefreshRate_s">1000</entry>
+<entry key="app_preset_prof_preset_stacks_p">false</entry>
+<entry key="app_preset_prof_preset_roots_p">Collection类中的sort方法.**
+File类的使用.**
+StringBuilder类.**
+String类中的方法.**
+String类地址相关.**
+contains方法的重写.**
+example.**
+foreach.**
+indexOf方法的实现.**
+java中的包装类.**
+内部类相关.**
+封装.**
+抽象类.**
+接口.**
+构造方法使用.**
+类的继承.**
+获取和操作时间.**
+进制转换.**
+重载方法.**
+静态常量与静态方法.**
+</entry>
+<entry key="profiler.settings.instrument.empty.methods">false</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">false</entry>
+<entry key="app_preset_prof_preset_samplingRate_s">100</entry>
+<entry key="app_preset_prof_preset_filterMode_s">true</entry>
+<entry key="app_preset_prof_preset_selector"/>
+<entry key="app_preset_prof_preset_refreshRate_s">1000</entry>
+<entry key="app_preset_prof_preset_runnables_p">true</entry>
+<entry key="app_preset_prof_preset_filterMode_p">false</entry>
+<entry key="app_preset_prof_preset_memoryMode_p">true</entry>
+</properties>

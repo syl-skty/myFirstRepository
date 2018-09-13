@@ -1,0 +1,45 @@
+mail.transport.protocol属性：
+			邮件发送的协议，必须指定值
+			可以为：SMTP
+
+mail.smtp.auth属性：
+			邮件是否要通过验证
+			true/false
+			
+mail.host属性:
+			表示代理发送邮件的服务器的地址
+			常用SMTP（邮件代理服务器）地址
+
+			1、QQ邮箱（mail.qq.com）
+			
+			POP3服务器地址：pop.qq.com（端口：110）
+			
+			SMTP服务器地址：smtp.qq.com（端口：25）
+			
+			2、搜狐邮箱（sohu.com）:
+			
+			POP3服务器地址:pop3.sohu.com（端口：110）
+			
+			SMTP服务器地址:smtp.sohu.com（端口：25）
+			
+			3、HotMail邮箱（hotmail.com）：
+			
+			POP3服务器地址：pop.live.com（端口：995）
+			
+			SMTP服务器地址：smtp.live.com（端口：587）
+			
+			4、移动139邮箱:
+			
+			POP3服务器地址：POP.139.com（端口：110）
+			
+			SMTP服务器地址：SMTP.139.com(端口：25)
+			
+			5、景安网络邮箱：
+			
+			POP3服务器地址：POP.zzidc.com（端口：110）
+			
+			SMTP服务器地址：SMTP.zzidc.com(端口：25)
+使用qq邮箱来进行这里的邮箱内容发送时，不能使用qq邮箱密码直接登陆，必须去获取邮箱授权码才能使用，也就是将密码改为授权码
+我的qq邮箱登陆时的授权码是uhffdcxhsjnpbbcd
+
+		
